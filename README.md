@@ -16,7 +16,7 @@ Fish abbreviations replace typed text with an extended command after pressing \<
 
 abbreviation | result 
 -------------|--------
-`p`          | `poetry`
+`po`          | `poetry`
 `pon`        | `poetry new --src`
 `poin`       | `poetry init`
 `poi`        | `poetry install`
