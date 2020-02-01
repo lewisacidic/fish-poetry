@@ -1,4 +1,4 @@
-# fish-docker
+# fish-poetry
 
 Abbreviations and completions for [`poetry`](https://python-poetry.org/) for the [fish shell](https://fishshell.com/) :fish:.
 
