@@ -3,5 +3,5 @@
 # Copyright (c) 2020 Rich Lewis
 # License: MIT
 
-set -g __lewisacidic_fish_poetry_version 0.0.1
+set -g __lewisacidic_fish_poetry_version 0.1.0
 
