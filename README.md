@@ -7,14 +7,14 @@ Abbreviations and completions for [`poetry`](https://python-poetry.org/) for the
 Using [`fisher`](https://github.com/jorgebucaran/fisher):
 
 ```fish
-fisher add lewisacidic/fish-poetry
+fisher add Gazorby/fish-poetry
 ```
 
 ## Usage
 
 Fish abbreviations replace typed text with an extended command after pressing \<Space> or \<Enter>.
 
-abbreviation | result 
+abbreviation | result
 -------------|--------
 `po`          | `poetry`
 `pon`        | `poetry new --src`
@@ -35,4 +35,3 @@ abbreviation | result
 `pov`        | `poetry version`
 `pox`        | `poetry export`
 `poe`        | `poetry env`
-
