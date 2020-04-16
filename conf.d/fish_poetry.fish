@@ -23,13 +23,11 @@ abbr pov 'poetry version'
 abbr pox 'poetry export'
 abbr poe 'poetry env'
 
-set -l name (basename (status -f) .fish){_uninstall}
-
-function $name --on-event $name
+function __fish_poetry_uninstall --on-event fish_poetry_uninstall
     abbr -e po
     abbr -e pon
     abbr -e poin
-    abbr -e 
+    abbr -e poi
     abbr -e poup
     abbr -e poa
     abbr -e porm
