@@ -7,7 +7,7 @@ Abbreviations and completions for [`poetry`](https://python-poetry.org/) for the
 Using [`fisher`](https://github.com/jorgebucaran/fisher):
 
 ```fish
-fisher add lewisacidic/fish-poetry
+fisher install lewisacidic/fish-poetry
 ```
 
 ## Usage
