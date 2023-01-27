@@ -1,46 +1,17 @@
-#!/usr/bin/env fish
-#
-# Copyright (c) 2020 Rich Lewis
-# License: MIT
-
-abbr po 'poetry'
-abbr pon 'poetry new --src'
-abbr poin 'poetry init'
-abbr poi 'poetry install'
-abbr poup 'poetry update'
-abbr poa 'poetry add'
-abbr porm 'poetry remove'
-abbr pos 'poetry show'
-abbr pob 'poetry build'
-abbr pop 'poetry publish'
-abbr poc 'poetry config'
-abbr por 'poetry run'
-abbr posh 'poetry shell'
-abbr pock 'poetry check'
-abbr pof 'poetry search'
-abbr pol 'poetry lock'
-abbr pov 'poetry version'
-abbr pox 'poetry export'
-abbr poe 'poetry env'
-
-function __fish_poetry_uninstall --on-event fish_poetry_uninstall
-    abbr -e po
-    abbr -e pon
-    abbr -e poin
-    abbr -e poi
-    abbr -e poup
-    abbr -e poa
-    abbr -e porm
-    abbr -e pos
-    abbr -e pob
-    abbr -e pop
-    abbr -e poc
-    abbr -e por
-    abbr -e posh
-    abbr -e pock
-    abbr -e pof
-    abbr -e pol
-    abbr -e pov
-    abbr -e pox
-    abbr -e poe
+function _fish_poetry_install --on-event fish_poetry_install
+    set -U __fish_poetry_abbreviations
 end
+
+function _fish_poetry_update --on-event fish_poetry_update
+    _fish_poetry_uninstall
+    _fish_poetry_install
+end
+
+function _fish_poetry_uninstall --on-event fish_poetry_uninstall
+    _fish_poetry_destroy
+end
+
+# Starting from fish 3.6.0, 'abbr' is a builtin and abbreviations are no longer stored in universal variables.
+not builtin -q abbr; and set -q __fish_poetry_initialized; and return 0
+
+_fish_poetry_init
